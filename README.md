@@ -1,6 +1,6 @@
 # Training Tickets Creator
 
-This app bulk creates fake tickets on a Zendesk account. For use in demo accounts, testing, etc. 
+This ticket sidebar app creates fake tickets in bulk. It is commonly used for staging demo accounts, trial accounts, testing etc. 
 
 Current Limitation: you must enter a fake Requester name/email. That will become the End User for all of the tickets created. In future updates, mulitple End Users will be automatically applied from a list of fake names/emails.  
 
