@@ -7,4 +7,4 @@ Current Limitation: you must enter a fake Requester name/email. That will become
 Please submit bug reports [here](https://github.com/Asa240/bulk_ticket_creation_app/issues). Pull requests are welcome.
 
 ### Screenshot(s):
-![Screenshot](/assets/screenshot.jpg?raw=true "Screenshot")
+![Screenshot](/assets/screenshot.png?raw=true "Screenshot")
