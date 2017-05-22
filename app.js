@@ -156,7 +156,7 @@
 
             importTicket: function(subject, description, email, name) {
                     return {
-                        url: '/api/v2/imports/tickets.json',
+                        url: '/api/v2/tickets.json',
                         type: 'POST',
                         contentType: 'application/json',
                         data: JSON.stringify({
