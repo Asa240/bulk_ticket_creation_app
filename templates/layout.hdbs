@@ -3,6 +3,7 @@
     <span class="logo" />
     <h3>{{setting "name"}}</h3>
 </header>
+    <!--
     <div class="form-group required">
         <label for="inputName">Requester Name:</label>
         <input type="text" class="form-control" id="inputName" placeholder="Jennifer Hansen" autocomplete="on">
@@ -12,6 +13,7 @@
         <input type="email" class="form-control" id="inputEmail" placeholder="jennifer.hansen@fakecompany.org" autocomplete="on">
     </div>
 </form>
+-->
 <div class="form-group">
     <label for="department">Ticket Theme:</label>
     <select class="form-control" id="selDepartment">

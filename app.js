@@ -21,7 +21,7 @@
             'click #createTickets': 'getCSVFile',
             'getCSV.fail': 'errorGettingCSV',
             'getCSV.done': 'parseCSV',
-            'searchRequester.done': 'makeRequester'
+            'searchRequester.done': 'makeTickets'
         }, //end of events
 
         changeTemplate: function(argument) {
@@ -44,13 +44,13 @@
             this.productArea = this.$("#selProductArea option:selected").val(); //setting product area from dropdown
             if (this.productArea === undefined) this.productArea = this.$("#selDepartment option:selected").val();
             /*Checking if requesterName and requesterEmail was set*/
-            if (this.requesterName.length === 0) {
+            /*if (this.requesterName.length === 0) {
                 services.notify('Requester Name is Required!', 'alert', 8000);
                 return;
             } else if (this.requesterEmail.length === 0) {
                 services.notify('Requester Email is Required!', 'alert', 8000);
                 return;
-            }
+            }*/
 
             this.ajax('getCSV', this.productArea); //getting CSV file
         }, //end of getCSVFile
@@ -90,7 +90,13 @@
                 that.num = l.length;
                 that.subject = each[0]; //setting subject
                 that.description = each[1]; //setting description
-                var request = that.ajax('importTicket', that.subject, that.description, that.requesterID) // call to create tickets
+		that.email = each[2]; //setting requester email
+		var firstname = that.email.split('@')[0].split('.')[0];
+		firstname = firstname.charAt(0).toUpperCase() + firstname.slice(1);
+		var lastname = that.email.split('@')[0].split('.')[1];
+		lastname = lastname.charAt(0).toUpperCase() + lastname.slice(1);
+		that.name = firstname + ' ' + lastname;
+                var request = that.ajax('importTicket', that.subject, that.description, that.email, that.name) // call to create tickets
                     .done(function(data) {
                         that.counter += 1;
                         var percentComplete = (that.counter / that.num) * 100;
@@ -148,14 +154,14 @@
 
             }, //end of createRequester
 
-            importTicket: function(subject, description, requester_id) {
+            importTicket: function(subject, description, email, name) {
                     return {
                         url: '/api/v2/imports/tickets.json',
                         type: 'POST',
                         contentType: 'application/json',
                         data: JSON.stringify({
                             "ticket": {
-                                "requester_id": requester_id,
+                                "requester": {"email": email, "name": name},
                                 "tags": ["zendesk_training_tickets"],
                                 "subject": subject,
                                 "comment": {
