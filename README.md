@@ -1,14 +1,20 @@
-# App name
+# Bulk Ticket Creation App
 
-[brief description of the app]
+***UPDATE (Spring'18)*** this app is now on the v2 Zendesk App Framework!
 
-### The following information is displayed:
+This ticket sidebar app creates fake tickets in bulk. 
 
-* info1
-* info2
-* info3
+Commonly used for... 
 
-Please submit bug reports to [Insert Link](). Pull requests are welcome.
+<ul>
+  <li>staging trial / demo accounts</li>
+  <li>training for new Agents</li>
+  <li>general testing</li>
+</ul>  
+
+Please submit bug reports [here](https://github.com/Asa240/bulk_ticket_creation_app/issues). Pull requests are welcome.
 
 ### Screenshot(s):
-[put your screenshots down here.]
+<img src="/assets/screenshot_2.gif" alt="demo" style="width:500px;">
+
+FULL DISCLOSURE: Much of the code for this app was "borrowed" from an existing app. [training-tickets-creator-app](https://github.com/ZendeskES/training-tickets-creator-app). The developer of that app deserves significant credit. 
