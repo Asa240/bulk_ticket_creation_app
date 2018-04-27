@@ -12,7 +12,8 @@ Commonly used for...
   <li>general testing</li>
 </ul>  
 
-Please submit bug reports [here](https://github.com/Asa240/bulk_ticket_creation_app/issues). Pull requests are welcome.
+
+<span style="color:red;font-size:20px;"> NOTE: you'll likely want to <strong>disable any Triggers and/or Automations before performing an import</strong>. To prevent bulk notifications/emails to be sent out.</span> 
 
 ### Screenshot(s):
 <img src="/assets/screenshot_2.gif" alt="demo" style="width:500px;">
